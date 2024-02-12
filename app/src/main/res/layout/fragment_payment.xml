@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".SectionOrders.checkout.payment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/clearsans_medium"
+            android:text="Payment"
+            android:textColor="@color/titletapColor"
+            android:textSize="34sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTintMode="multiply"
+            android:contextClickable="false"
+            android:cursorVisible="false"
+            android:fontFamily="@font/clearsans_medium"
+            android:forceDarkAllowed="false"
+            android:gravity="top"
+            android:text="Payment method"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/titletapColor"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayoutpayment"
+            app:layout_constraintStart_toStartOf="@+id/linearLayoutpayment"
+            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutpayment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="60dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView19">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF">
+
+                <RadioButton
+                    android:id="@+id/CARD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:drawableLeft="@drawable/cardradio"
+                    android:drawablePadding="20dp"
+                    android:fontFamily="@font/clearsans_medium"
+                    android:text="CARD"
+                    android:textColor="@color/titletapColor" />
+
+                <RadioButton
+                    android:id="@+id/CASH"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/cashradio"
+                    android:drawablePadding="20dp"
+                    android:text="CASH"
+                    android:textColor="@color/titletapColor" />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutTypepayment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView122">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF">
+
+                <RadioButton
+                    android:id="@+id/Doordeliverypayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:fontFamily="@font/clearsans_medium"
+                    android:text="Door delivery"
+                    android:textColor="@color/titletapColor" />
+
+                <RadioButton
+                    android:id="@+id/pickuppayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/clearsans_medium"
+                    android:text="pickup"
+                    android:textColor="@color/titletapColor" />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView122"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/clearsans_medium"
+            android:text="Delivery method."
+            android:textColor="@color/titletapColor"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/linearLayoutTypepayment"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutpayment" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/clearsans_medium"
+            android:text="Total"
+            android:textColor="@color/BtnColor"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/linearLayoutTypepayment"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutTypepayment" />
+
+        <TextView
+            android:id="@+id/TOTALPRICEPAYMENT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/clearsans_medium"
+            android:text="TextView"
+            android:textColor="@color/titletapColor"
+            app:layout_constraintBottom_toBottomOf="@+id/textView23"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayoutTypepayment"
+            app:layout_constraintTop_toTopOf="@+id/textView23" />
+
+        <Button
+            android:id="@+id/ProceedtopaymentBTNpAY"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/BtnColor"
+            android:text="Proceed to payment"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

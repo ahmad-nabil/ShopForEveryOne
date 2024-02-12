@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:background="#EFEEEE"
+    android:clickable="true">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/itemsView"
+        android:layout_width="111dp"
+        android:layout_height="116dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:scaleType="centerCrop"
+        app:shapeAppearance="@style/RoundedSquare"
+        app:srcCompat="@drawable/kidsitems3" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/itemsView"
+        android:layout_centerHorizontal="true"
+        android:background="#EFEEEE">
+
+        <TextView
+            android:id="@+id/itemNameCART"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="false"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/clearsans_bold"
+            android:text="TextView"
+            android:textColor="@color/titletapColor"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/priceitemCART"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/priceitemCART"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/itemNameCART"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/clearsans_bold"
+            android:text="TextView"
+            android:textColor="@color/titletapColor"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemNameCART" />
+
+        <TextView
+            android:id="@+id/numItem"
+            style="@android:style/Widget.Holo.TextView"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentEnd="false"
+            android:background="@drawable/rounded_corner_tv"
+            android:backgroundTint="@color/BtnColor"
+            android:backgroundTintMode="src_in"
+            android:elevation="15dp"
+            android:ellipsize="middle"
+            android:fadingEdge="horizontal|vertical"
+            android:fontFamily="@font/clearsans_bold"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="1"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/BtnRemovecart"
+            app:layout_constraintStart_toStartOf="@+id/BtnAddcart"
+            app:layout_constraintTop_toBottomOf="@+id/BtnAddcart"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/BtnAddcart"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:icon="@drawable/outline_add_circle_outline_24"
+            app:iconSize="25dp"
+            app:iconTint="@color/BtnColor"
+            app:layout_constraintBottom_toBottomOf="@+id/priceitemCART"
+            app:layout_constraintEnd_toStartOf="@+id/BtnRemovecart"
+            app:layout_constraintStart_toEndOf="@+id/itemNameCART"
+            app:layout_constraintTop_toTopOf="@+id/itemNameCART" />
+
+        <Button
+            android:id="@+id/BtnRemovecart"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:icon="@drawable/outline_remove_circle_outline_24"
+            app:iconSize="25dp"
+            app:iconTint="@color/BtnColor"
+            app:iconTintMode="multiply"
+            app:layout_constraintBottom_toTopOf="@+id/numItem"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/BtnAddcart"
+            app:layout_constraintTop_toTopOf="@+id/BtnAddcart" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

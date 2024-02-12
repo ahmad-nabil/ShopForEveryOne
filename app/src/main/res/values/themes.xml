@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SHOPFOREVERYONE" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:textColorHint">@color/BtnColor</item>
+        <item name="android:colorControlNormal">@color/BtnColor</item>
+        <item name="android:colorControlActivated">@color/BtnColor</item>
+    </style>
+<style name="customsearchview" parent="Widget.AppCompat.SearchView">
+    <item name="queryBackground">@android:color/transparent</item>
+    <item name="searchIcon">@drawable/baseline_search_24</item>
+    <item name="android:textColorHint">@color/BtnColor</item>
+    <item name="android:editTextBackground">@color/BtnColor</item>
+    <item name="android:colorControlNormal">@color/BtnColor</item>
+    <item name="android:colorControlActivated">@color/BtnColor</item>
+
+
+</style>
+    <style name="Theme.SHOPFOREVERYONE" parent="Base.Theme.SHOPFOREVERYONE" />
+</resources>

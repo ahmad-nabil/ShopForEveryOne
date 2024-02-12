@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "63221716612",
+    "project_id": "shop-for-every-one-f38f3",
+    "storage_bucket": "shop-for-every-one-f38f3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:63221716612:android:c6d128e5b25029465414d1",
+        "android_client_info": {
+          "package_name": "com.ahmad.shopforeveryone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBK2QoQ-N61KduNQvTA-OjSp1PhH1NqKbw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

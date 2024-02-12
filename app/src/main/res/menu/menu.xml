@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="MenuTitle">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/home"
+    />
+    <item
+        android:id="@+id/orders"
+        android:icon="@drawable/order_food"
+         />
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/user"
+        />
+    <item
+        android:id="@+id/notfi"
+        android:icon="@drawable/bell"
+     />
+
+</menu>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:focusable="true"
+    tools:context=".SectionOrders.items.ItemSelected">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="200dp"
+            android:layout_height="250dp"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/slidesIMG"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:iss_auto_cycle="false"
+                app:iss_corner_radius="15"
+                app:iss_delay="1000"
+            />
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/BtnAdd"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:background="@android:color/transparent"
+            app:icon="@drawable/outline_add_circle_outline_24"
+            app:iconSize="30dp"
+            app:iconTint="@color/BtnColor"
+            app:layout_constraintEnd_toStartOf="@+id/BtnRemove"
+            app:layout_constraintStart_toStartOf="@+id/cardView"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+        <Button
+            android:id="@+id/BtnRemove"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@android:color/transparent"
+            app:icon="@drawable/outline_remove_circle_outline_24"
+            app:iconSize="30dp"
+            app:iconTint="@color/BtnColor"
+            app:iconTintMode="multiply"
+            app:layout_constraintEnd_toEndOf="@+id/cardView"
+            app:layout_constraintStart_toEndOf="@+id/BtnAdd"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+        <TextView
+            android:id="@+id/countitems"
+            android:layout_width="@android:dimen/app_icon_size"
+            android:layout_height="@android:dimen/app_icon_size"
+            android:layout_marginStart="28dp"
+            android:background="@color/BtnColor"
+            android:gravity="center"
+            android:text="99"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/BtnRemove"
+            app:layout_constraintEnd_toStartOf="@+id/buynowBtn"
+            app:layout_constraintStart_toEndOf="@+id/BtnRemove"
+            app:layout_constraintTop_toTopOf="@+id/BtnRemove"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/nameitems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/clearsans_bold"
+            android:text="Woman Jacket"
+            android:textColor="@color/titletapColor"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/madeInTV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cardView"
+            app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+        <TextView
+            android:id="@+id/madeInTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/clearsans_regular"
+            android:text="Made in Jordan"
+            android:textColor="#c7c7c7"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/totalprice"
+            app:layout_constraintEnd_toEndOf="@+id/nameitems"
+            app:layout_constraintStart_toStartOf="@+id/nameitems"
+            app:layout_constraintTop_toBottomOf="@+id/nameitems" />
+
+        <TextView
+            android:id="@+id/totalprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/clearsans_bold"
+            android:text=" 20 JD"
+            android:textColor="@color/BtnColor"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/buynowBtn"
+            app:layout_constraintEnd_toEndOf="@+id/madeInTV"
+            app:layout_constraintHorizontal_bias="0.614"
+            app:layout_constraintStart_toStartOf="@+id/madeInTV"
+            app:layout_constraintTop_toBottomOf="@+id/madeInTV" />
+
+        <Button
+            android:id="@+id/buynowBtn"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/BtnColor"
+            android:text="Buy Now"
+            app:layout_constraintBottom_toTopOf="@+id/BtnRemove"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.617"
+            app:layout_constraintStart_toEndOf="@+id/cardView"
+            app:layout_constraintTop_toBottomOf="@+id/totalprice" />
+
+        <TextView
+            android:id="@+id/Descriptiontitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/clearsans_bold"
+            android:text="Description"
+            android:textColor="@color/BtnColor"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline6" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/clearsans_bold"
+            android:gravity="center"
+            android:text="Woman Woman Jacket Made in Jordan 20 JD Add to Cart Buy Now Description From functional and stylish trench coats to weather-ready parkas, smart blazers and chic kimonos, we’ve got every outerwear style you could need this season in our new online collection. Find the right wardrobe option to suit any occasion and master the art of layering in style. Invest in a quality, classic piece that you will want to wear year after year."
+            android:textColor="#19055B"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Descriptiontitle" />
+
+        <Button
+            android:id="@+id/addCart"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:backgroundTint="@color/BtnColor"
+            android:text="Add to cart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.45" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
